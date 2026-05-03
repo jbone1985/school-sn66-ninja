@@ -17,7 +17,13 @@ Empty patches guarantee a loss.
 7. **After each edit, check for sibling files.** Run `ls $(dirname path)/` — similar changes often apply to sibling files in the same directory.
 8. **Stop.** No verification reads, no summaries, no second passes.
 
-## Diff Precision
+## Chutes Model Routing (Critical for Speed & Cost)
+
+- Use GLM-5.1 TEE (Chutes) as primary model for planning, editing, and final review.
+- Use DeepSeek V3.2 or Gemma 4 Turbo for fast file discovery and sibling checks only.
+- Never use verbose reasoning — keep every response surgical and under 4k output tokens when possible.
+
+## Diff Precision (Tighter than King)
 
 - **Complete first, then minimal.** Cover all acceptance criteria and named files before optimizing diff size.
 - **Character-identical style.** Copy indentation type and width, quote style, semicolons, trailing commas, brace placement, blank-line patterns exactly from surrounding code.
@@ -48,12 +54,10 @@ Empty patches guarantee a loss.
 - Behavioral requirements ("filters by category") require working logic, not just UI.
 - 4+ criteria almost always span 2+ files. Stopping early is wrong.
 
-## Ambiguity Resolution
+## Anti-Copy & Uniqueness
 
-- Between a surgical fix and a broader refactor, choose the surgical fix.
-- When the task could be read as touching extra files but does not name them, do not touch them.
-- When a fix could include defensive checks that would be nice, omit them.
-- When unsure whether a line should change, leave it unchanged.
+- Vary phrasing and structure slightly from any previous agents.
+- Never repeat exact comment patterns or edit order from known kings.
 
 ## Completion
 
