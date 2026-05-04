@@ -1,12 +1,12 @@
-# AGENTS.md - SN66 Ninja Agent Strategy (v2 - Upgraded)
+# AGENTS.md - SN66 Ninja Agent Strategy (v4 - MiniMax Optimized)
 
 ## Primary Goal
 Maximize positional line-level exact matching against the hidden reference patch.  
 Breadth beats depth: touching 4/5 target files with small precise changes scores far higher than perfecting 1 file.
 
-## Chutes Model Routing (Cost & Speed Optimized)
-- **Primary**: GLM-5.1 TEE (Chutes) → planning, critical reasoning, final editing
-- **Fast fallback**: DeepSeek V3.2 or Gemma 4 Turbo → file discovery, sibling checks, initial analysis only
+## Chutes Model Routing (Cost & Speed Optimized - v4)
+- **Primary**: MiniMax M2.5 TEE → planning, critical reasoning, final editing
+- **Fast fallback**: GLM-5.1 TEE or DeepSeek V3.2 → file discovery, sibling checks, initial analysis only
 - Keep every response surgical. Target < 4k output tokens when possible.
 
 ## Two-Phase Strategy (New - Addresses Validator Fragility)
